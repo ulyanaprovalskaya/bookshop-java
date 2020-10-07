@@ -1,4 +1,4 @@
-package com.grsu.bookShop.service;
+package com.grsu.bookShop.service.bookService;
 
 import com.grsu.bookShop.exception.BooksNotFoundException;
 import com.grsu.bookShop.model.book.Book;

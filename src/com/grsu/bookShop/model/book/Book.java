@@ -1,8 +1,9 @@
 package com.grsu.bookShop.model.book;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public abstract class Book {
+public abstract class Book implements Serializable {
     String title;
     String author;
     BookGenre genre;
@@ -49,5 +50,12 @@ public abstract class Book {
         this.author = author;
         this.genre = genre;
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return  "\"" + title + "\" "
+                + author + ", price: "
+                + price + '\n';
     }
 }

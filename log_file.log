@@ -1,0 +1,30 @@
+2020-10-16 20:22:11 INFO  CallCenter:35 - Call-center started working
+2020-10-16 20:22:11 INFO  Client:60 - Client 3 is calling
+2020-10-16 20:22:11 INFO  Client:60 - Client 1 is calling
+2020-10-16 20:22:11 INFO  Client:60 - Client 4 is calling
+2020-10-16 20:22:11 INFO  Operator:41 - Operator 1 took a call of client 3
+2020-10-16 20:22:11 INFO  Operator:41 - Operator 2 took a call of client 1
+2020-10-16 20:22:11 INFO  Operator:41 - Operator 3 took a call of client 4
+2020-10-16 20:22:11 INFO  Client:60 - Client 7 is calling
+2020-10-16 20:22:11 INFO  Client:70 - Client 7 is waiting for free operator in the queue
+2020-10-16 20:22:11 INFO  Operator:43 - Operator 1 finished dialog with client 3
+2020-10-16 20:22:11 INFO  Operator:43 - Operator 2 finished dialog with client 1
+2020-10-16 20:22:11 INFO  Operator:43 - Operator 3 finished dialog with client 4
+2020-10-16 20:22:11 INFO  Client:84 - Client 7 left the queue
+2020-10-16 20:48:58 INFO  CallCenter:35 - Call-center started working
+2020-10-16 20:48:58 INFO  Client:60 - Client 1 is calling
+2020-10-16 20:48:58 INFO  Operator:41 - Operator 1 took a call of client 1
+2020-10-16 20:48:58 INFO  Client:60 - Client 7 is calling
+2020-10-16 20:48:58 INFO  Operator:41 - Operator 2 took a call of client 7
+2020-10-16 20:48:58 INFO  Operator:43 - Operator 1 finished dialog with client 1
+2020-10-16 20:48:58 INFO  Operator:43 - Operator 2 finished dialog with client 7
+2020-10-16 21:20:04 INFO  CallCenter:35 - Call-center started working
+2020-10-16 21:20:04 INFO  Client:60 - Client 1 is calling
+2020-10-16 21:20:04 INFO  Client:60 - Client 3 is calling
+2020-10-16 21:20:04 INFO  Operator:41 - Operator 1 took a call of client 1
+2020-10-16 21:20:04 INFO  Operator:41 - Operator 2 took a call of client 3
+2020-10-16 21:20:04 INFO  Client:60 - Client 7 is calling
+2020-10-16 21:20:04 INFO  Operator:41 - Operator 3 took a call of client 7
+2020-10-16 21:20:04 INFO  Operator:43 - Operator 2 finished dialog with client 3
+2020-10-16 21:20:04 INFO  Operator:43 - Operator 1 finished dialog with client 1
+2020-10-16 21:20:04 INFO  Operator:43 - Operator 3 finished dialog with client 7

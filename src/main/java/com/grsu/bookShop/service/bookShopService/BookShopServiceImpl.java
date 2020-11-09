@@ -30,4 +30,20 @@ public class BookShopServiceImpl implements BookShopService {
                 .map(s -> s.getPrice())
                 .mapToInt(BigDecimal::intValue).sum();
     }
+
+    @Override
+    public List<Book> getBooksByAuthor(String author) throws BooksNotFoundException {
+        List<Book> suitableBooks = new ArrayList<>();
+
+        Optional<Book> suitableBooksOptional = bookShop.getBooksByAuthor()
+                .entrySet().stream()
+                .filter(s -> s.getKey().equals(author))
+                .map(s -> (Book)s.getValue()).findFirst();
+
+        if(suitableBooksOptional.isPresent()) {
+            suitableBooks = (List<Book>) suitableBooksOptional.orElseThrow(() -> new BooksNotFoundException("No books were found"));
+        }
+
+        return suitableBooks;
+    }
 }

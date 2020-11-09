@@ -14,4 +14,6 @@ public interface BookShopService {
     BookShop deserialize(String filename);
 
     int getTotalPriceOfBookShop();
+
+    List<Book> getBooksByAuthor(String author) throws BooksNotFoundException;
 }

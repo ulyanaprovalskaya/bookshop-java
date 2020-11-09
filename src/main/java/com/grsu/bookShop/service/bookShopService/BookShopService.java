@@ -13,7 +13,5 @@ public interface BookShopService {
 
     BookShop deserialize(String filename);
 
-    BigDecimal getTotalPriceOfBookShop();
-
-    List<Book> getBooksByAuthor(String author) throws BooksNotFoundException;
+    int getTotalPriceOfBookShop();
 }

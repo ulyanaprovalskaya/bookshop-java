@@ -8,6 +8,7 @@ import com.grsu.bookShop.model.bookShop.BookShop;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class BookServiceImpl implements BookService{
 
@@ -16,11 +17,9 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public List<Book> getBooksByGivenProperty(String author) throws BooksNotFoundException {
-        List<Book> suitableBooks = new ArrayList<>();
-        for(Book book : bookShopBooks){
-            if(book.getAuthor().equals(author))
-                suitableBooks.add(book);
-        }
+        List<Book> suitableBooks = bookShopBooks.stream()
+                .filter(s -> s.getAuthor().equals(author))
+                .collect(Collectors.toList());
 
         if(suitableBooks.size() == 0) throw new BooksNotFoundException("No books were found");
         else return suitableBooks;
@@ -28,11 +27,9 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public List<Book> getBooksByGivenProperty(BookGenre genre) throws BooksNotFoundException {
-        List<Book> suitableBooks = new ArrayList<>();
-        for(Book book : bookShopBooks){
-            if(book.getGenre().equals(genre))
-                suitableBooks.add(book);
-        }
+        List<Book> suitableBooks = bookShopBooks.stream()
+                .filter(s -> s.getGenre().equals(genre))
+                .collect(Collectors.toList());
 
         if(suitableBooks.size() == 0) throw new BooksNotFoundException("No books were found");
         else return suitableBooks;

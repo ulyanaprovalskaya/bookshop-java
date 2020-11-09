@@ -2,6 +2,7 @@ package com.grsu.bookShop.model.book;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public abstract class Book implements Serializable {
     String title;
@@ -57,5 +58,21 @@ public abstract class Book implements Serializable {
         return  "\"" + title + "\" "
                 + author + ", price: "
                 + price + '\n';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(title, book.title) &&
+                Objects.equals(author, book.author) &&
+                genre == book.genre &&
+                Objects.equals(price, book.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, author, genre, price);
     }
 }
